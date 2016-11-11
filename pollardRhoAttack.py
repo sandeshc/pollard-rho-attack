@@ -42,7 +42,7 @@ def pollardRhoAttack(a, N, B):
     """ Implementation of Pollard's Rho - 1 Attack """
 
     # computing a**(B!) (mod N)
-    for i in range(2, B + 1):
+    for i in xrange(2, B + 1):
         a = moduloPower(a, i, N)
 
     # computing gcd(a - 1, N)
