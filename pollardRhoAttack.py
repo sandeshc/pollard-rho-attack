@@ -8,8 +8,8 @@ CODE_FAIL    = 1
 MSG = []
 MSG.append('Number of Arguments does not match the Expected.' + \
     '\nUsage: python pollardRhoAttack.py <N> <B>')
-MSG.append('FAILURE.' + \
-    '\nUnable to factorize the large prime.')
+MSG.append('FAILURE. ' + \
+    'Unable to factorize the large prime.')
 
 if len(sys.argv) != 3:
     exit(MSG[CODE_ARG])
