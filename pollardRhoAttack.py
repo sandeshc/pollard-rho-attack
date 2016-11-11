@@ -40,7 +40,7 @@ def moduloPower(a, i, N):
 
 def pollardRhoAttack(a, N, B):
     """ Implementation of Pollard's Rho - 1 Attack """
-    """ Worst Case Complexity: O( B * ( log(B) * log(N) ) ) """
+    """ Worst Case Complexity: O( B * log(B) * log(N) ) """
 
     # computing a**(B!) (mod N)
     for i in xrange(2, B + 1):
