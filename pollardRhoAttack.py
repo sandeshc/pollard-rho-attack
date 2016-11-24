@@ -16,7 +16,7 @@ if len(sys.argv) != 3:
 
 def gcd(a, b):
     """ Returns gcd(a, b) """
-    """ Complexity: O( log(N) ) """
+    """ Complexity: O( log^3(N) ) """
     if a > b:
         return gcd(b, a)
 
@@ -27,7 +27,7 @@ def gcd(a, b):
 
 def moduloPower(a, i, N):
     """ Returns a**i (mod N) """
-    """ Complexity: O( log(B) * log(N) ) """
+    """ Complexity: O( log(B) * log^2(N) ) """
     val = 1
     while i > 0:
         if i % 2:
@@ -40,7 +40,7 @@ def moduloPower(a, i, N):
 
 def pollardRhoAttack(a, N, B):
     """ Implementation of Pollard's Rho - 1 Attack """
-    """ Worst Case Complexity: O( B * log(B) * log(N) ) """
+    """ Worst Case Complexity: O( ( B * log(B) + log(N) ) * log^2(N) ) """
 
     # computing a**(B!) (mod N)
     for i in xrange(2, B + 1):
